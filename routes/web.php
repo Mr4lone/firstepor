@@ -14,7 +14,7 @@ use App\Http\Controllers\StudentController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('blog/index');
 });
 
 Route::view('users','livewire.home');
