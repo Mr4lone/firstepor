@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +13,11 @@ use App\Http\Controllers\StudentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('posts', PostController::class);
 
-Route::get('/', function () {
-    return view('blog/index');
-});
+// Route::get('/', function () {
+//     return view('blog/index');
+// });
 
 Route::view('users','livewire.home');
 
