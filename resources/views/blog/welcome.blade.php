@@ -20,6 +20,16 @@
 <div class="container">
 <div class="blog_area wow fadeInUp">
     <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2>Edit Post</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('posts.create') }}"> Create</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         @foreach ($posts as $post)
         <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="post-slide">

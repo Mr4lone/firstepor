@@ -24,6 +24,7 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'shortnote' =>'required',
             'description' => 'required',
         ]);
         Post::create($request->all());
