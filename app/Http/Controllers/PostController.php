@@ -10,16 +10,15 @@ class PostController extends Controller
     
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(3);
+        //$posts = Post::all();
         return view('blog.welcome', compact('posts'));
     }
-
-   
+  
     public function create()
     {
         return view('blog.create');
     }
-
    
     public function store(Request $request)
     {
@@ -32,7 +31,6 @@ class PostController extends Controller
      return redirect()->route('posts.index')->with('success','Post created successfully.');
      // return redirect()->route('posts.welcome', ['id' => 1]);
     }
-
   
     public function show(Post $post)
     {
@@ -43,7 +41,6 @@ class PostController extends Controller
     {
         return view('blog.edit',compact('post'));
     }
-
     public function update(Request $request, Post $post)
     {
         $request->validate([
@@ -54,7 +51,6 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success','Post updated successfully');
   
     }
-
      public function destroy(Post $post)
     {
         $post->delete();

@@ -5,7 +5,7 @@
 		<!-- Meta -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		
+		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<title>MOCTC-</title>
 		{{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet"> --}}
 		{{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i,800,800i" rel="stylesheet">
@@ -16,7 +16,7 @@
 		<link rel="icon" href="{{asset('images/favicon.jpg')}}"/>
 <link href="{{asset('css/owl.carousel.min.css')}}" rel="stylesheet"/>
 		<link href="{{asset('css/owl.theme.default.min.css')}}" rel="stylesheet"/>
-		<link href="{{asset('css/lightbox.min.css')}}" rel="stylesheet"/>
+		{{-- <link href="{{asset('css/lightbox.min.css')}}" rel="stylesheet"/> --}}
 		<link href="{{asset('css/owl.theme.default.min.css')}}" rel="stylesheet"/>
 <link href="{{asset('css/animate.min.css')}}" rel="stylesheet"/>
 		<link href="{{asset('css/normalize.css')}}" rel="stylesheet"/>
@@ -25,14 +25,14 @@
 		
 	</head>
 	
-	 <body data-spy="scroll" data-offset="50">
-		<!-- START PRELOADER -->
+	 <body data-spy="scroll"> 
+		{{-- <!-- START PRELOADER data-offset="50"-->
 			<div class="preloader">
 				<div class="spinner">
 					<div class="double-bounce1"></div>
 					<div class="double-bounce2"></div>
 				</div>
-			</div>
+			</div> --}}
 		<!-- END PRELOADER -->
 		
 		<!-- START NAVBAR -->
@@ -54,14 +54,11 @@
 							
 							<nav id="navbar" class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#home">မူလစာမျက်နှာ</a></li>
+									<li><a href="http://127.0.0.1:8000/">မူလစာမျက်နှာ</a></li>
 									<li><a href="#about_us">ကျွနုပ်တို့အကြောင်း</a></li>
 									<li><a href="#service">ဝန်ဆောင်မှုများ</a></li>
 									<li><a href="#portfolio">ပရောဂျက်များ</a></li>
-									{{-- <li><a href="#team">Team</a></li>	 --}}
-									{{-- <li><a href="#pricing_table">Pricing</a></li> --}}
 									<li><a href="{{ route('posts.index') }}">Blog</a></li>
-									{{-- <li><a href="{{ route('student.')}}">Blog</a></li>														 --}}
 									<li><a href="#contact">Contact</a></li>
 								</ul>
 							</nav> 
@@ -166,17 +163,22 @@
 		<!-- Lightbox min js  -->
 			<script src="{{asset('js/lightbox.min.js')}}"></script>
 		<!-- Jquery inview js -->
-			<script src="js/jquery.inview.min.js"></script>
+			{{-- <script src="js/jquery.inview.min.js"></script> --}}
 		<!-- scrolltopcontrol js -->
 			<script src="{{asset('js/scrolltopcontrol.js')}}"></script>
 		<!-- Particles js -->
-			<script src="{{asset('js/particles.min.js')}}"></script>
-			<script src="{{asset('js/app.js')}}"></script>		
+			{{-- <script src="{{asset('js/particles.min.js')}}"></script> --}}
+			{{-- <script src="{{asset('js/app.js')}}"></script>		 --}}
 		<!-- WOW - Reveal Animations When You Scroll -->
 			<script src="{{asset('js/wow.min.js')}}"></script>
 		<!-- Main js -->
 			<script src="{{asset('js/main.js')}}"></script>
-	
+			<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+				   $('.ckeditor').ckeditor();
+				});
+			</script>
     </body>
 
 </html>

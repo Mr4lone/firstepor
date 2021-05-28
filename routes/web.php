@@ -15,11 +15,11 @@ use App\Http\Controllers\PostController;
 */
 Route::resource('posts', PostController::class);
 
-// Route::get('/', function () {
-//     return view('blog/index');
-// });
+Route::get('/', function () {
+    return view('blog/index');
+});
 
-Route::view('users','livewire.home');
+//Route::view('users','livewire.home');
 
 
 /*

@@ -777,13 +777,7 @@
 
 
 <!-- START COPYRIGHT -->
-<section class="copyright_area">
-	<div class="copyright text-center">
-		<div class="copy_text">
-			<p>Copyright ©2021 MOCTC | All Rights Reserved</p>
-		</div>
-	</div>
-</section>
+
 <!-- END COPYRIGHT -->
 
 @endsection
