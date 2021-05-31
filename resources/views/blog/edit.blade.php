@@ -37,7 +37,12 @@
                                 <input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder="Title">
                             </div>
                         </div>
-            
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Shortnote:</strong>
+                                <input type="text" name="title" value="{{ $post->shortnote }}" class="form-control" placeholder="shortnote">
+                            </div>
+                        </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Description:</strong>

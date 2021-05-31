@@ -28,7 +28,7 @@
 
 						<div class="post-review">
 						<h3 class="post-title">  {{ $post->title }}</h3>
-					
+							<p class="post-description"> {{($post->shortnote)}}</p>
 							<p class="post-description">  {{ $post->description }}</p>
 							<a href="#" class="read">read more<i class="fa fa-angle-right"></i></a>
 						</div>
