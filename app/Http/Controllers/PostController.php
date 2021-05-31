@@ -46,6 +46,7 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'shortnote'=>'required',
             'description' => 'required',
         ]);
         $post->update($request->all());
