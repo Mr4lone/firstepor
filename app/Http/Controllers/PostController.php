@@ -26,8 +26,18 @@ class PostController extends Controller
             'title' => 'required',
             'shortnote' =>'required',
             'description' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-        Post::create($request->all());
+
+        $path = $request->file('image')->store('public/images');
+        $post = new Post;
+        $post->title = $request->title;
+        $post->shortnote=$request->shortnote;
+        $post->description=$request->description;
+        $post->image=$path;
+        $post->save();
+
+        //Post::create($request->all());
       //  return view('blog.welcome');//->with('success','Created successfully');
      return redirect()->route('posts.index')->with('success','Post created successfully.');
      // return redirect()->route('posts.welcome', ['id' => 1]);

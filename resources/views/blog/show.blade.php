@@ -28,6 +28,10 @@
 
 						<div class="post-review">
 						<h3 class="post-title">  {{ $post->title }}</h3>
+						<div class="post-img">
+							<img src="{{ Storage::url($post->image) }}" height="75" width="75"  alt="">
+							
+						</div>
 							<p class="post-description"> {{($post->shortnote)}}</p>
 							<p class="post-description">  {{ $post->description }}</p>
 							<a href="#" class="read">read more<i class="fa fa-angle-right"></i></a>

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ImageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +15,13 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [ App\Http\Controllers\ImageController::class, 'index' ]);
+Route::post('/', [ App\Http\Controllers\ImageController::class, 'store' ])->name('images.store');
+
+
 Route::resource('posts', PostController::class);
 
-Route::get('/', function () {
+Route::get('/q', function () {
     return view('blog/index');
 });
 
