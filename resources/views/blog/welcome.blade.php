@@ -34,7 +34,7 @@
         <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="post-slide">
                 <div class="post-img">
-                    <img src="images/blog/1.jpg" alt="">
+                    <img src="{{ Storage::url($post->image) }}" alt="">
                     <span class="icons">
                         <img src="images/blog/1.png" alt="">
                     </span>
